@@ -1,21 +1,21 @@
 const timelineItems = [
   {
     title: 'Academy Establishment',
-    year: '2019',
+    year: '2023',
     description:
-      'Established the Eduzen learning ecosystem to deliver practical, career-first training for students and early professionals.',
+      'Established the Eduzen Learning Ecosystem, a modern career-focused education platform designed to bridge the gap between academic learning and real-world industry skills. Built to empower students, graduates, and early professionals, Eduzen delivers practical, hands-on training programs in emerging technologies, career development, digital skills, and industry-ready professional education.',
   },
   {
-    title: 'International Accreditation',
-    year: '2021',
+    title: 'National Accreditation',
+    year: '2024',
     description:
-      'Expanded quality benchmarks through global-aligned frameworks and strategic partnerships for modern skill development.',
+      'Expanded quality benchmarks through globally aligned learning frameworks, strategic partnerships, and industry-focused training models to strengthen modern skill development, career readiness, employability, and practical education for students and early professionals.',
   },
   {
     title: 'Digital Expansion',
-    year: '2023',
+    year: '2026',
     description:
-      'Scaled online-first delivery with mentorship-driven cohorts, enabling broader access to industry-relevant education.',
+      'Scaled an online-first learning ecosystem with mentorship-driven cohorts, expanding access to industry-relevant education, practical skill development, and career-focused training for students and early professionals. Enabled flexible, technology-driven learning experiences designed to improve employability, upskilling, and real-world readiness.',
   },
 ]
 

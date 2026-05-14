@@ -2,7 +2,7 @@ const founder = {
   name: 'Founder, Eduzen Solutions',
   role: 'Founding Director',
   image:
-    '/foundersnote.png',
+    '/founders_name.png',
 }
 
 const noteText =

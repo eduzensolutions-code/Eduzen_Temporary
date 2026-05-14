@@ -7,7 +7,7 @@ import mentorsIcon from '../assets/briefcase_hero.png';
 
 const stats = [
   { value: '50000+', label: 'Students Trained', icon: studentsIcon },
-  { value: '200+', label: 'Workshops', icon: workshopsIcon },
+  { value: '500+', label: 'Workshops', icon: workshopsIcon },
   { value: 'Industry', label: 'Mentors', icon: mentorsIcon },
 ]
 
