@@ -1,3 +1,5 @@
+import { useForm, ValidationError } from '@formspree/react'
+
 const contactCards = [
   {
     title: 'Mail Us',
@@ -13,6 +15,7 @@ const contactCards = [
       </svg>
     ),
   },
+
   {
     title: 'Location',
     subtitle: 'Come Visit us',
@@ -27,11 +30,12 @@ const contactCards = [
       </svg>
     ),
   },
+
   {
     title: 'Contact',
     subtitle: "We're here to help.",
     value: '+91 8350015893',
-    href: '#contact',
+    href: 'tel:+918350015893',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 text-[#e0a526]">
         <path
@@ -46,94 +50,160 @@ const contactCards = [
 function ContactCard({ card }) {
   return (
     <article className="w-full rounded-lg border border-white bg-[#141414] p-[25px]">
+
       <div className="flex items-start gap-[17px]">
+
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#e0a526]/10">
           {card.icon}
         </div>
+
         <div>
-          <h3 className="text-[20px] font-semibold leading-7 text-[#ffc300]">{card.title}</h3>
-          <p className="text-sm leading-5 text-white">{card.subtitle}</p>
+          <h3 className="text-[20px] font-semibold leading-7 text-[#ffc300]">
+            {card.title}
+          </h3>
+
+          <p className="text-sm leading-5 text-white">
+            {card.subtitle}
+          </p>
         </div>
+
       </div>
+
       <a
         href={card.href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-[17px] inline-block break-all text-[19.866px] font-medium leading-[29.798px] text-[#e0a526] transition-colors hover:text-[#ffc300] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300]"
       >
         {card.value}
       </a>
+
     </article>
   )
 }
 
 export default function ContactSection() {
+
+  const [state, handleSubmit] = useForm("mdabvvjk")
+
   return (
     <section id="contact" className="px-5 py-16 md:px-10 md:py-20">
+
       <div className="mx-auto flex w-full max-w-[1168px] flex-col items-center gap-12 md:gap-[68px]">
+
         <header className="w-full max-w-[768px] text-center">
+
           <h2 className="font-['Bebas_Neue'] text-[56px] leading-none tracking-[1.8px] md:text-[72px]">
             <span className="text-[#ffc300]">Contact </span>
             <span className="text-white">us</span>
           </h2>
+
           <p className="mt-6 text-lg leading-7 text-white md:text-[20px]">
             Let us know how we can help.
           </p>
+
         </header>
 
         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+
           {contactCards.map((card) => (
             <ContactCard key={card.title} card={card} />
           ))}
+
         </div>
 
+        {state.succeeded && (
+          <p className="text-green-400 text-lg font-medium">
+            Message sent successfully!
+          </p>
+        )}
+
         <form
+          onSubmit={handleSubmit}
           className="w-full rounded-xl border border-white/25 bg-[#141414] p-6 md:p-8"
           aria-label="Contact us form"
         >
+
           <fieldset className="m-0 grid border-0 p-0 md:grid-cols-2 md:gap-5">
+
             <legend className="mb-5 text-left text-xl font-semibold text-[#ffc300]">
               Send a message
             </legend>
 
             <label className="mb-4 flex flex-col gap-2 md:mb-0">
-              <span className="text-sm text-white/90">Name</span>
+
+              <span className="text-sm text-white/90">
+                Name
+              </span>
+
               <input
                 type="text"
                 name="name"
                 autoComplete="name"
+                required
                 className="h-12 rounded-lg border border-white/35 bg-black px-4 text-white placeholder:text-white/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300]"
                 placeholder="Your name"
               />
+
             </label>
 
             <label className="mb-4 flex flex-col gap-2 md:mb-0">
-              <span className="text-sm text-white/90">Email</span>
+
+              <span className="text-sm text-white/90">
+                Email
+              </span>
+
               <input
                 type="email"
                 name="email"
                 autoComplete="email"
+                required
                 className="h-12 rounded-lg border border-white/35 bg-black px-4 text-white placeholder:text-white/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300]"
                 placeholder="you@example.com"
               />
+
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+
             </label>
 
             <label className="mb-4 flex flex-col gap-2 md:col-span-2 md:mb-0">
-              <span className="text-sm text-white/90">Message</span>
+
+              <span className="text-sm text-white/90">
+                Message
+              </span>
+
               <textarea
                 name="message"
                 rows={4}
+                required
                 className="min-h-32 rounded-lg border border-white/35 bg-black px-4 py-3 text-white placeholder:text-white/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300]"
                 placeholder="Tell us what you need help with"
               />
+
+              <ValidationError
+                prefix="Message"
+                field="message"
+                errors={state.errors}
+              />
+
             </label>
 
             <button
               type="submit"
-              className="mt-5 inline-flex h-12 items-center justify-center rounded-lg bg-[#ffc300] px-6 text-base font-semibold text-black transition-colors hover:bg-[#ffd23f] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300] md:col-span-2 md:mt-1 md:w-fit"
+              disabled={state.submitting}
+              className="mt-5 inline-flex h-12 items-center justify-center rounded-lg bg-[#ffc300] px-6 text-base font-semibold text-black transition-colors hover:bg-[#ffd23f] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc300] md:col-span-2 md:mt-1 md:w-fit"
             >
-              Send Message
+              {state.submitting ? 'Sending...' : 'Send Message'}
             </button>
+
           </fieldset>
+
         </form>
+
       </div>
     </section>
   )
