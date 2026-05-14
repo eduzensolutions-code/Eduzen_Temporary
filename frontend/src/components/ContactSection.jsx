@@ -17,7 +17,7 @@ const contactCards = [
     title: 'Location',
     subtitle: 'Come Visit us',
     value: 'google.maps.com',
-    href: 'https://google.maps.com',
+    href: 'https://maps.app.goo.gl/VB8NtV11ySW9P1gk9?g_st=aw',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 text-[#e0a526]">
         <path
