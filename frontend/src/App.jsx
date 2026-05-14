@@ -55,7 +55,19 @@ function App() {
          property="og:image"
          content="https://eduzensolutions.in/preview.png"
          />
-      
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Eduzen Solutions Private Limited",
+            url: "https://eduzensolutions.in",
+            logo: "https://eduzensolutions.in/favicon-96x96.png",
+            sameAs: [
+              "https://www.instagram.com/eduzensolutionsofficial",
+              "https://in.linkedin.com/company/eduzen-solutions"
+            ]
+          })}
+        </script>
       </Helmet>
 
     <main className="min-h-screen bg-black">
