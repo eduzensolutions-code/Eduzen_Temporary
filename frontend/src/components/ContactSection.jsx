@@ -30,7 +30,7 @@ const contactCards = [
   {
     title: 'Contact',
     subtitle: "We're here to help.",
-    value: 'upcoming',
+    value: '+91 8350015893',
     href: '#contact',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 text-[#e0a526]">
