@@ -29,7 +29,7 @@ const impactStats = [
     title: 'A Pan-India Strategic Network',
     description:
       'Our expansive institutional and corporate footprint accelerates opportunity across the nation, ensuring local talent meets global industry standards.',
-    image: 'https://www.figma.com/api/mcp/asset/d91c956e-f03a-469f-8e27-5816be91890b',
+    image: '/indianmap.jpeg',
     imageAlt: 'Contemporary office collaboration space',
     reverse: true,
   },
