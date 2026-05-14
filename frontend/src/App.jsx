@@ -9,7 +9,7 @@ import FooterSection from './components/FooterSection'
 
 
 import {Helmet} from "react-helmet-async"
-//changes test
+//changes test ahh
 
 
 
@@ -20,19 +20,18 @@ function App() {
 
         
         <title>
-          Eduzen Solutions | Workforce Development & CSR Integration
+          Eduzen Solutions Private Limited | Workforce Development | Official
         </title>
 
 
-
-
-
-        // Meta tags for SEO and social media sharing
         <meta
           name="description"
           content="Eduzen Solutions empowers communities through skilling, workforce development, CSR integration, and livelihood creation initiatives across India."
         />
-      
+        <meta 
+        name="robots"
+        content="index, follow"
+       />
         <meta
           property="og:title"
           content="Eduzen Solutions"
@@ -52,8 +51,13 @@ function App() {
           property="og:url"
           content="https://eduzensolutions.in"
         />
+        <meta
+         property="og:image"
+         content="https://eduzensolutions.in/preview.png"
+         />
       
       </Helmet>
+
     <main className="min-h-screen bg-black">
       <Navbar />
       <Hero />
