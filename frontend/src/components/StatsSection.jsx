@@ -4,7 +4,7 @@ const impactStats = [
     title: 'Empowering India’s Future Workforce',
     description:
       'Over 50,000+ ambitious students and young professionals across India have gained access to transformative, industry-focused training programs designed to bridge the gap between education and real-world careers.',
-    image: 'https://www.figma.com/api/mcp/asset/c98f79c1-419f-404d-8cb6-d454b6677fe8',
+    image: '../workshop.png',
     imageAlt: 'Students collaborating during a workshop',
   },
   {

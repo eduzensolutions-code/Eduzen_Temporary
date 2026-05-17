@@ -3,49 +3,49 @@ const services = [
     title: 'Industry Skills',
     description:
       'Project-based learning focusing on modern tech stacks and frameworks demanded by top-tier organizations.',
-    icon: 'https://www.figma.com/api/mcp/asset/5c53eec5-39a5-4f52-b517-6c536eb929ed',
+    icon: '../industry_skills.png',
   },
   {
     title: 'Social Impact',
     description:
       'Executing high-value initiatives that channel resources into skill development and employability for underserved communities.',
-    icon: 'https://www.figma.com/api/mcp/asset/a5ff6903-a8d6-48f8-84f8-24496ec17cd2',
+    icon: '../social_impact.png',
   },
   {
     title: 'Guided Admissions',
     description:
       'Streamlined college selection and application support to secure placements in premium, career-aligned institutions.',
-    icon: 'https://www.figma.com/api/mcp/asset/efb3adf3-ae85-497b-a870-b94710825abb',
+    icon: '../guided_admission.png',
   },
   {
     title: 'Career Roadmapping',
     description:
       'Personalized blueprints to identify core strengths and map a definitive strategy for long-term success.',
-    icon: 'https://www.figma.com/api/mcp/asset/ff446424-387a-4d31-9186-ebfe0fd63a54',
+    icon: '../career_roadmap.png',
   },
   {
     title: 'Corporate Placements',
     description:
       'Direct access to exclusive internships and full-time roles through our premium hiring partner network.',
-    icon: 'https://www.figma.com/api/mcp/asset/7fe53216-b841-461e-813b-a7b41494735e',
+    icon: '../corporate_placements.png',
   },
   {
     title: 'Campus Partnerships',
     description:
       'Integrating industry-led upskilling programs directly into campuses to improve student corporate readiness.',
-    icon: 'https://www.figma.com/api/mcp/asset/4e8b82d9-d5b3-4f6c-8947-5d4c9911fc39',
+    icon: '../campus_parternships.png',
   },
   {
     title: 'Research & Consulting',
     description:
       'Data-backed advisory and capability-building tracks for institutions focused on measurable learner outcomes.',
-    icon: 'https://www.figma.com/api/mcp/asset/1168c524-98a7-4ba4-8086-dab76e64cc97',
+    icon: '../research_consulting.png',
   },
   {
     title: 'Expert Mentorship',
     description:
       'Structured guidance from seasoned practitioners to accelerate clarity, confidence, and execution.',
-    icon: 'https://www.figma.com/api/mcp/asset/b209d357-7f55-432b-8eea-71dc632dfc9b',
+    icon: '../expert_mentorship.png',
   },
 ]
 

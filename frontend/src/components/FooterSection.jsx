@@ -11,7 +11,7 @@ const legalLinks = [
 ]
 
 const contactItems = [
-  { label: 'Email', value: 'contact@eduzensolutions.com', href: 'mailto:contact@eduzensolutions.com' },
+  { label: 'Email', value: 'info@eduzensolutions.in', href: 'mailto:info@eduzensolutions.in' },
   { label: 'Phone', value: '+91 8350015893', href: 'tel:+91 8350015893' },
 ]
 
