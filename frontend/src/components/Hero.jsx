@@ -1,14 +1,7 @@
-import heroImage from '../assets/hero_image.png';
-const heroImageUrl = heroImage;
-
-import studentsIcon from '../assets/student_icon_hero.png';
-import workshopsIcon from '../assets/university_hero.png';
-import mentorsIcon from '../assets/briefcase_hero.png';
-
 const stats = [
-  { value: '50000+', label: 'Students Trained', icon: studentsIcon },
-  { value: '500+', label: 'Workshops', icon: workshopsIcon },
-  { value: 'Industry', label: 'Mentors', icon: mentorsIcon },
+  { value: '50000+', label: 'Students Trained', icon: '/student_icon_hero.png' },
+  { value: '500+', label: 'Workshops', icon: '/university_hero.png' },
+  { value: 'Industry', label: 'Mentors', icon: '/briefcase_hero.png' },
 ]
 
 export default function Hero() {
@@ -22,7 +15,7 @@ export default function Hero() {
             aria-hidden="true"
           >
             <img
-              src={heroImageUrl}
+              src="/hero_image.png"
               alt=""
               className="h-full w-full object-cover object-[70%_center]"
             />
@@ -117,7 +110,7 @@ export default function Hero() {
             "
           >
             <img
-              src={heroImageUrl}
+              src="/hero_image.png"
               alt="Student working in focused low-light environment"
               className="h-full w-full object-cover object-[34%_center]"
             />

@@ -8,7 +8,7 @@ const navItems = [
   { label: 'Contact Us', href: '#contact' },
 ]
 
-const logoUrl = 'https://www.figma.com/api/mcp/asset/157641a5-c56f-4633-995d-f1a4db97ee29'
+const logoUrl = '../logo.png'
 
 function MobileMenuIcon({ open }) {
   return (
