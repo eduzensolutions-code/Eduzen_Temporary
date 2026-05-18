@@ -1,43 +1,12 @@
-const impactStats = [
-  {
-    value: '50000+',
-    title: 'Empowering India’s Future Workforce',
-    description:
-      'Over 50,000+ ambitious students and young professionals across India have gained access to transformative, industry-focused training programs designed to bridge the gap between education and real-world careers.',
-    image: '../workshop.png',
-    imageAlt: 'Students collaborating during a workshop',
-  },
-  {
-    value: 'Tier 2 & 3',
-    title: 'Mobilizing Underserved Talent',
-    description:
-      'We maintain a dominant presence in Tier 2 and 3 regions, bringing practical, real-world career readiness to ambitious students in non-metropolitan hubs.',
-    image: '/city.jpeg',
-    imageAlt: 'Industrial learning environment',
-    reverse: true,
-  },
-  {
-    value: '500+',
-    title: 'Designing Career Blueprints',
-    description:
-      'Through hundreds of interactive workshops and high-impact seminars, we build strategic career awareness and essential financial literacy for India’s youth.',
-    image: '/carrier.jpeg',
-    imageAlt: 'Professional mentoring session',
-  },
-  {
-    value: '8+ States',
-    title: 'A Pan-India Strategic Network',
-    description:
-      'Our expansive institutional and corporate footprint accelerates opportunity across the nation, ensuring local talent meets global industry standards.',
-    image: '/indianmap.jpeg',
-    imageAlt: 'Contemporary office collaboration space',
-    reverse: true,
-  },
-]
+import { impactStats } from '../data/impact'
+import { sectionCopy } from '../data/sections'
+import Card from './ui/Card'
+import Container from './ui/Container'
+import SectionHeading from './ui/SectionHeading'
 
 function StatCard({ item }) {
   return (
-    <article className="rounded-[8px] border border-white bg-black p-5 md:p-7 lg:p-[36px]">
+    <Card className="rounded-[8px] border border-white bg-black p-5 md:p-7 lg:p-[36px]">
       <div
         className={`flex flex-col items-center gap-8 lg:gap-[92px] ${item.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}
       >
@@ -58,33 +27,33 @@ function StatCard({ item }) {
           </p>
         </div>
       </div>
-    </article>
+    </Card>
   )
 }
 
 export default function StatsSection() {
   return (
     <section id="impact" className="px-5 py-16 md:px-10 md:py-20 lg:px-[35px] lg:py-[80px]">
-      <div className="mx-auto flex w-full max-w-[1254px] flex-col items-center gap-12 lg:gap-[62px]">
-        <header className="max-w-[1104px] text-center">
-          <h2 className="text-4xl leading-[1.2] text-[#f3f4f6] md:text-5xl md:leading-[48px]">
+      <Container className="flex max-w-[1254px] flex-col items-center gap-12 lg:gap-[62px]">
+        <SectionHeading
+          className="max-w-[1104px] text-center"
+          title={
+            <>
             The <span className="text-[#ffc300]">Impact</span> We Have{' '}
             <span className="text-[#ffc300]">Made</span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-[1180px] text-base font-semibold leading-7 text-[#d1d5db] md:mt-8 md:text-[20px]">
-            Eduzen Solutions empowers students with practical, industry-focused learning designed
-            for the real world. Through mentorship, modern technology training, workshops, and
-            career-driven programs, we help bridge the gap between academics and professional
-            success.
-          </p>
-        </header>
+            </>
+          }
+          titleClassName="text-4xl leading-[1.2] text-[#f3f4f6] md:text-5xl md:leading-[48px]"
+          description={sectionCopy.programsDescription}
+          descriptionClassName="mx-auto mt-6 max-w-[1180px] text-base font-semibold leading-7 text-[#d1d5db] md:mt-8 md:text-[20px]"
+        />
 
         <div className="flex w-full flex-col gap-8 lg:gap-[50px]">
           {impactStats.map((item) => (
             <StatCard key={item.value} item={item} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

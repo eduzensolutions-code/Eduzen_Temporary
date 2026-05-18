@@ -8,78 +8,53 @@ import FoundersNoteSection from './components/FoundersNoteSection'
 import FooterSection from './components/FooterSection'
 
 
-import {Helmet} from "react-helmet-async"
-//changes test ahh
-
-
+import { Helmet } from 'react-helmet-async'
+import { canonicalUrl, organizationSchema, previewImageUrl, seo } from './data/seo'
 
 function App() {
   return (
     <>
       <Helmet>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={canonicalUrl} />
 
-        
-        <title>
-          Eduzen Solutions Private Limited | Workforce Development | Official
-        </title>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={seo.siteName} />
+        <meta property="og:locale" content={seo.locale} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={previewImageUrl} />
+        <meta property="og:image:secure_url" content={previewImageUrl} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content={seo.imageAlt} />
 
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content={seo.twitterHandle} />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <meta name="twitter:image" content={previewImageUrl} />
+        <meta name="twitter:image:alt" content={seo.imageAlt} />
 
-        <meta
-          name="description"
-          content="Eduzen Solutions empowers communities through skilling, workforce development, CSR integration, and livelihood creation initiatives across India."
-        />
-        <meta 
-        name="robots"
-        content="index, follow"
-       />
-        <meta
-          property="og:title"
-          content="Eduzen Solutions"
-        />
-      
-        <meta
-          property="og:description"
-          content="Empowering the future-ready workforce across India."
-        />
-      
-        <meta
-          property="og:type"
-          content="website"
-        />
-      
-        <meta
-          property="og:url"
-          content="https://eduzensolutions.in"
-        />
-        <meta
-         property="og:image"
-         content="https://eduzensolutions.in/preview.png"
-         />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Eduzen Solutions Private Limited",
-            url: "https://eduzensolutions.in",
-            logo: "https://eduzensolutions.in/favicon-96x96.png",
-            sameAs: [
-              "https://www.instagram.com/eduzensolutionsofficial",
-              "https://in.linkedin.com/company/eduzen-solutions"
-            ]
-          })}
+          {JSON.stringify(organizationSchema)}
         </script>
       </Helmet>
 
-    <main className="min-h-screen bg-black">
       <Navbar />
-      <Hero />
-      <AboutSection />
-      <ServicesSection />
-      <StatsSection />
-      <FoundersNoteSection />
-      <ContactSection />
+      <main className="min-h-screen bg-black">
+        <Hero />
+        <AboutSection />
+        <ServicesSection />
+        <StatsSection />
+        <FoundersNoteSection />
+        <ContactSection />
+      </main>
       <FooterSection />
-    </main>
     </>
     
   )
