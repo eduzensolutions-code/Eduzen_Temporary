@@ -12,7 +12,7 @@ const impactStats = [
     title: 'Mobilizing Underserved Talent',
     description:
       'We maintain a dominant presence in Tier 2 and 3 regions, bringing practical, real-world career readiness to ambitious students in non-metropolitan hubs.',
-    image: 'https://www.figma.com/api/mcp/asset/1d1ca188-71ab-45f7-abf1-0ac38c6c8977',
+    image: '/city.jpeg',
     imageAlt: 'Industrial learning environment',
     reverse: true,
   },
@@ -21,7 +21,7 @@ const impactStats = [
     title: 'Designing Career Blueprints',
     description:
       'Through hundreds of interactive workshops and high-impact seminars, we build strategic career awareness and essential financial literacy for India’s youth.',
-    image: 'https://www.figma.com/api/mcp/asset/38613d38-9886-413e-9f1f-fd2bbfed3059',
+    image: '/carrier.jpeg',
     imageAlt: 'Professional mentoring session',
   },
   {
