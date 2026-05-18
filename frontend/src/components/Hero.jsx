@@ -1,21 +1,19 @@
-const stats = [
-  { value: '50000+', label: 'Students Trained', icon: '/student_icon_hero.png' },
-  { value: '500+', label: 'Workshops', icon: '/university_hero.png' },
-  { value: 'Industry', label: 'Mentors', icon: '/briefcase_hero.png' },
-]
+import { heroActions, heroStats } from '../data/hero'
+import ButtonLink from './ui/ButtonLink'
+import Container from './ui/Container'
 
 export default function Hero() {
   return (
     <section className="relative px-5 pb-8 pt-4 md:px-10 md:pb-10 lg:px-[45px] lg:pb-[52px]">
-      <div className="mx-auto w-full max-w-[1440px]">
-<div className="relative lg:flex lg:items-start lg:justify-start lg:gap-10 xl:gap-16">
+      <Container className="max-w-[1440px]">
+        <div className="relative grid min-w-0 lg:grid-cols-[minmax(0,680px)_minmax(360px,1fr)] lg:items-start lg:gap-10 xl:gap-16 2xl:grid-cols-[minmax(0,700px)_minmax(420px,1fr)]">
           {/* ── MOBILE ONLY: full-bleed background image that sits behind text ── */}
           <div
             className="absolute inset-0 -mx-5 -mt-4 overflow-hidden lg:hidden"
             aria-hidden="true"
           >
             <img
-              src="/hero_image.png"
+              src="/hero_image.webp"
               alt=""
               className="h-full w-full object-cover object-[70%_center]"
             />
@@ -25,15 +23,15 @@ export default function Hero() {
           </div>
 
           {/* ── TEXT CONTENT (both layouts share this) ── */}
-          <div className="relative z-10 flex flex-col items-start">
+          <div className="relative z-10 flex min-w-0 flex-col items-start">
 
             {/* Tagline row */}
             <div className="mb-6 flex w-full max-w-[781px] items-center justify-center gap-[15px] lg:mb-[44px]">
-              <span className="h-[2px] w-12 bg-[#ffc300] md:w-24 lg:w-[160px]" />
+              <span aria-hidden="true" className="h-[2px] w-12 bg-[#ffc300] md:w-24 lg:w-[160px]" />
               <p className="whitespace-nowrap text-center text-[10px] font-semibold uppercase tracking-[0.12em] text-[#ffc300] sm:text-[13px] md:text-[16px] lg:text-[23.8px] lg:tracking-[1.19px]">
                 Empowering Student Careers
               </p>
-              <span className="h-[2px] w-12 bg-[#ffc300] md:w-24 lg:w-[160px]" />
+              <span aria-hidden="true" className="h-[2px] w-12 bg-[#ffc300] md:w-24 lg:w-[160px]" />
             </div>
 
             {/* H1 */}
@@ -52,27 +50,22 @@ export default function Hero() {
 
             {/* CTA buttons */}
             <div className="mb-8 flex flex-wrap items-center gap-4 lg:mb-[48px]">
-              <a
-                href="#programs"
-                className="inline-flex h-[52px] items-center justify-center rounded-[8px] bg-[#ffc300] px-7 text-base font-bold text-black shadow-[0_0_7.5px_rgba(212,175,55,0.3)] transition-colors duration-200 hover:bg-[#ffd23f] lg:h-[58px] lg:px-8"
-              >
-                Explore Programs
-              </a>
-              <a
-                href="#get-started"
-                className="inline-flex h-[52px] items-center justify-center rounded-[8px] border border-[#ffc300] px-6 text-base font-bold text-[#ffc300] transition-colors duration-200 hover:bg-[#ffc300] hover:text-black lg:h-[58px] lg:px-[33px]"
-              >
-                Get Started
-              </a>
+              {heroActions.map((action) => (
+                <ButtonLink key={action.label} href={action.href} variant={action.variant}>
+                  {action.label}
+                </ButtonLink>
+              ))}
             </div>
 
             {/* Stats bar */}
-            <dl className="grid w-full grid-cols-3 border-y border-white/30 py-5 md:py-[33px]">
-              {stats.map((item, index) => (
+            <dl className="grid w-full grid-cols-1 border-y border-white/30 py-5 min-[420px]:grid-cols-3 md:py-[33px]">
+              {heroStats.map((item, index) => (
                 <div
                   key={item.label}
-                  className={`flex items-center gap-3 md:gap-4 ${
-                    index > 0 ? 'border-l border-white/30 pl-3 sm:pl-5 md:pl-8' : ''
+                  className={`flex min-w-0 items-center gap-3 py-3 first:pt-0 last:pb-0 min-[420px]:py-0 md:gap-4 ${
+                    index > 0
+                      ? 'border-t border-white/30 pt-4 min-[420px]:border-l min-[420px]:border-t-0 min-[420px]:pl-3 min-[420px]:pt-0 sm:pl-5 md:pl-8'
+                      : ''
                   }`}
                 >
                   {/* THE YELLOW BOX */}
@@ -80,11 +73,12 @@ export default function Hero() {
                     {/* YOUR PNG ICON (Sits exactly inside the yellow box) */}
                     <img
                       src={item.icon}
-                      alt={item.label}
+                      alt=""
+                      aria-hidden="true"
                       className="h-4 w-4 object-contain md:h-5 md:w-5"
                     />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <dt className="text-base font-bold leading-6 text-white sm:text-lg md:text-2xl md:leading-8">
                       {item.value}
                     </dt>
@@ -102,23 +96,26 @@ export default function Hero() {
             className="
               hidden lg:block
               relative
-              w-[500px] xl:w-[1000px]
-              h-[600px] xl:h-[800px]
-              shrink-0 self-start
+              h-[560px] xl:h-[700px] 2xl:h-[760px]
+              w-full min-w-0 max-w-[620px] xl:max-w-[720px] 2xl:max-w-[760px]
+              justify-self-end self-start
               overflow-hidden rounded-[16px]
               shadow-[0_20px_80px_rgba(0,0,0,0.5)]
             "
           >
             <img
-              src="/hero_image.png"
+              src="/hero_image.webp"
               alt="Student working in focused low-light environment"
               className="h-full w-full object-cover object-[34%_center]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10"
+              aria-hidden="true"
+            />
           </div>
 
         </div>
-      </div>
+      </Container>
     </section>
   )
 }

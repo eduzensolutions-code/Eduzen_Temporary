@@ -1,17 +1,10 @@
-const founder = {
-  name: 'Founder, Eduzen Solutions',
-  role: 'Founding Director',
-  image:
-    '/founders_name.png',
-}
-
-const noteText =
-  'Eduzen was built on a simple conviction: education should produce capability, not just certificates. We work to create practical, career-defining pathways where ambition is met with structured mentorship, modern skill-building, and real industry readiness. Our commitment is to ensure every learner moves forward with clarity, confidence, and measurable growth.'
+import { founder, founderNote } from '../data/founder'
+import Container from './ui/Container'
 
 export default function FoundersNoteSection() {
   return (
     <section id="founders-note" className="px-5 py-12 md:px-10 md:py-14">
-      <div className="mx-auto w-full max-w-[1104px] border-y border-white/25 py-7 md:py-9">
+      <Container className="max-w-[1104px] border-y border-white/25 py-7 md:py-9">
         <article className="grid items-start gap-6 md:grid-cols-[260px_minmax(0,1fr)] md:gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
           <figure className="m-0">
             <img
@@ -30,7 +23,7 @@ export default function FoundersNoteSection() {
             </header>
 
             <blockquote className="m-0 border-b border-white/20 py-4 text-[15px] leading-[1.72] text-[#e5e7eb] md:text-[16px] md:leading-[1.78]">
-              <p>{noteText}</p>
+              <p>{founderNote}</p>
             </blockquote>
 
             <footer className="pt-3">
@@ -39,7 +32,7 @@ export default function FoundersNoteSection() {
             </footer>
           </div>
         </article>
-      </div>
+      </Container>
     </section>
   )
 }
