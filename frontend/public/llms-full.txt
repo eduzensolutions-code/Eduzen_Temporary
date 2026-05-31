@@ -1,0 +1,49 @@
+Eduzen Solutions Private Limited — Workforce Development | Official
+
+Overview:
+Eduzen Solutions empowers communities through skilling, workforce development, CSR integration, and livelihood creation initiatives across India. We focus on mentorship-driven cohorts, practical project-based learning, and career-ready outcomes.
+
+SEO Title: Eduzen Solutions Private Limited | Workforce Development | Official
+SEO Description: Eduzen Solutions empowers communities through skilling, workforce development, CSR integration, and livelihood creation initiatives across India.
+
+Mission:
+To equip learners with practical, industry-ready capabilities through mentorship, technology-enabled learning, and outcome-focused programs.
+
+About / Timeline:
+- Academy Establishment (2023): Established the Eduzen Learning Ecosystem, a modern career-focused education platform designed to bridge the gap between academic learning and real-world industry skills. Built to empower students, graduates, and early professionals, Eduzen delivers practical, hands-on training programs in emerging technologies, career development, digital skills, and industry-ready professional education.
+- National Accreditation (2024): Expanded quality benchmarks through globally aligned learning frameworks, strategic partnerships, and industry-focused training models to strengthen modern skill development, career readiness, employability, and practical education for students and early professionals.
+- Digital Expansion (2026): Scaled an online-first learning ecosystem with mentorship-driven cohorts, expanding access to industry-relevant education, practical skill development, and career-focused training for students and early professionals. Enabled flexible, technology-driven learning experiences designed to improve employability, upskilling, and real-world readiness.
+
+Value Statements:
+Our Mission: To equip learners with practical, industry-ready capabilities through mentorship, technology-enabled learning, and outcome-focused programs.
+Our Voice: We believe premium education should be clear, actionable, and inclusive. Every learning experience is designed for confidence, employability, and measurable growth.
+
+Programs / Services (titles and descriptions):
+- Industry Skills: Project-based learning focusing on modern tech stacks and frameworks demanded by top-tier organizations.
+- Social Impact: Executing high-value initiatives that channel resources into skill development and employability for underserved communities.
+- Guided Admissions: Streamlined college selection and application support to secure placements in premium, career-aligned institutions.
+- Career Roadmapping: Personalized blueprints to identify core strengths and map a definitive strategy for long-term success.
+- Corporate Placements: Direct access to exclusive internships and full-time roles through our premium hiring partner network.
+- Campus Partnerships: Integrating industry-led upskilling programs directly into campuses to improve student corporate readiness.
+- Research & Consulting: Data-backed advisory and capability-building tracks for institutions focused on measurable learner outcomes.
+- Expert Mentorship: Structured guidance from seasoned practitioners to accelerate clarity, confidence, and execution.
+
+Impact Highlights (expanded):
+- Empowering India’s Future Workforce: Over 50,000+ ambitious students and young professionals across India have gained access to transformative, industry-focused training programs designed to bridge the gap between education and real-world careers.
+- Mobilizing Underserved Talent: We maintain a dominant presence in Tier 2 and 3 regions, bringing practical, real-world career readiness to ambitious students in non-metropolitan hubs.
+- Designing Career Blueprints: Through hundreds of interactive workshops and high-impact seminars, we build strategic career awareness and essential financial literacy for India’s youth.
+- A Pan-India Strategic Network: Our expansive institutional and corporate footprint accelerates opportunity across the nation, ensuring local talent meets global industry standards.
+
+Contact & Outreach:
+Email: info@eduzensolutions.in
+Phone: +91 8350015893
+Maps: https://maps.app.goo.gl/VB8NtV11ySW9P1gk9?g_st=aw
+
+Navigation labels and anchors:
+About (#about), Services (#services), Impact (#impact), Contact Us (#contact)
+
+Hero CTAs:
+Explore Programs -> #services
+Get Started -> #contact
+
+Source: Compiled from site copy and data files in frontend/src/data
