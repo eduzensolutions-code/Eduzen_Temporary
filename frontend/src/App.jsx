@@ -46,7 +46,7 @@ function App() {
       </Helmet>
 
       <Navbar />
-      <main className="min-h-screen bg-black">
+      <main id="top" className="min-h-screen bg-black">
         <Hero />
         <AboutSection />
         <ServicesSection />
